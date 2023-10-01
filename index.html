@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema HD</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/e04cc55ddd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/png" href="./assets/Cinema HD.jpg" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <section id="landing">
+      <div class="nav__wrapper">
+        <nav>
+          <div class="row">
+            <div class="nav__container">
+              <figure class="nav__logo">
+                <img
+                  src="./assets/Cinema HD.jpg"
+                  alt=""
+                  class="nav__logo--img"
+                />
+              </figure>
+              <ul class="nav__links">
+                <li class="nav__link click nav__link--hover">
+                  <a href=""></a>About
+                </li>
+                <li class="nav__link click nav__link--hover">
+                  <a href="#movies"></a>Movies
+                </li>
+                <li class="nav__link click">
+                  <a href=""></a
+                  ><button
+                    class="nav__link nav__link--btn click nav__link--hover--btn"
+                  >
+                    Contact
+                  </button>
+                </li>
+              </ul>
+              <button class="menu--btn click" onclick="openMenu()">
+                <i class="fas fa-bars"></i>
+              </button>
+              <div class="menu__backdrop">
+                <button class="menu--btn menu--close click" onclick="closeMenu()">
+                  <i class="fas fa-times"></i>
+                </button>
+                <ul class="menu__links">
+                  <li class="menu__list click"><a href="#" class="menu__link"></a>About</li>
+                  <li class="menu__list click"><a href="#" class="menu__link"></a>Movies</li>
+                  <li class="menu__list click">
+                    <a href="#" class="menu__link"></a
+                    ><button
+                      class="nav__link nav__link--btn click nav__link--hover--btn menu__link--primary"
+                    >
+                      Contact
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <header>
+        <div class="row">
+          <div class="container">
+            <h1 class="header__title">
+              Welcome to <span class="green">Cinema HD</span> where you can
+              enjoy all your favourite movies!
+            </h1>
+            <h2 class="header__subtitle">
+              Get started today by simply searching for the movie you want to
+              watch now or later!
+            </h2>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <section id="movies">
+      <div class="row">
+        <div class="container">
+          <div class="search-and-filter">
+            <div class="input__wrapper">
+              <input
+                id="search__input"
+                type="text"
+                placeholder="Search Here!"
+                onchange="searchMovie(event)"
+              />
+              <div class="search__icon">
+                <i class="fas fa-search" onclick="searchMovie()"></i>
+              </div>
+            </div>
+            <div class="movie__filter">
+              <select
+                id="sort"
+                class="click"
+                onchange="sortMovieRelease(event)"
+              >
+                <option value selected>Sort</option>
+                <option value="new_to_old">Most_Recent</option>
+                <option value="old_to_new">Oldest</option>
+              </select>
+            </div>
+          </div>
+          <h1 class="movie__header">Trending now:</h1>
+          <div class="movies__wrapper">
+            <div class="movie click">
+              <figure class="movie__img--wrapper">
+                <img
+                  src="./assets/oppenheimer jpeg.jpg"
+                  alt=""
+                  class="movie__img"
+                />
+              </figure>
+              <div class="movie__info">
+                <h1 class="movie__title">Oppenheimer</h1>
+                <h1 class="movie__release"></h1>
+              </div>
+            </div>
+            <div class="movie click">
+              <figure class="movie__img--wrapper">
+                <img src="./assets/barbie jpeg.jpg" alt="" class="movie__img" />
+              </figure>
+              <div class="movie__info">
+                <h1 class="movie__title">Barbie</h1>
+                <h1 class="movie__release"></h1>
+              </div>
+            </div>
+            <div class="movie click">
+              <figure class="movie__img--wrapper">
+                <img
+                  src="./assets/no hard feelings jpeg.jpg"
+                  alt=""
+                  class="movie__img"
+                />
+              </figure>
+              <div class="movie__info">
+                <h1 class="movie__title">No Hard Feelings</h1>
+                <h1 class="movie__release"></h1>
+              </div>
+            </div>
+            <div class="movie click">
+              <figure class="movie__img--wrapper">
+                <img
+                  src="./assets/blue beetle jpeg.jpg"
+                  alt=""
+                  class="movie__img"
+                />
+              </figure>
+              <div class="movie__info">
+                <h1 class="movie__title">Blue Beetle</h1>
+                <h1 class="movie__release"></h1>
+              </div>
+            </div>
+            <div class="movie click">
+              <figure class="movie__img--wrapper">
+                <img
+                  src="./assets/gran turismo jpeg.jpg"
+                  alt=""
+                  class="movie__img"
+                />
+              </figure>
+              <div class="movie__info">
+                <h1 class="movie__title">Gran Turismo</h1>
+                <h1 class="movie__release"></h1>
+              </div>
+            </div>
+            <div class="movie click">
+              <figure class="movie__img--wrapper">
+                <img
+                  src="./assets/guardian of galaxy poster img.jpg"
+                  alt=""
+                  class="movie__img"
+                />
+              </figure>
+              <div class="movie__info">
+                <h1 class="movie__title">Guardians of the Galaxy Vol. 3</h1>
+                <h1 class="movie__release"></h1>
+              </div>
+            </div>
+            <div class="movie click">
+              <figure class="movie__img--wrapper">
+                <img src="./assets/meg 2 jpeg.jpg" alt="" class="movie__img" />
+              </figure>
+              <div class="movie__info">
+                <h1 class="movie__title">The Meg 2</h1>
+                <h1 class="movie__release"></h1>
+              </div>
+            </div>
+            <div class="movie click">
+              <figure class="movie__img--wrapper">
+                <img
+                  src="./assets/heart of stone jpeg.jpg"
+                  alt=""
+                  class="movie__img"
+                />
+              </figure>
+              <div class="movie__info">
+                <h1 class="movie__title">Heart of Stone</h1>
+                <h1 class="movie__release"></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="row">
+        <div class="container">
+          <h1 class="footer__title">
+            The best place to browse your favourite movies.
+          </h1>
+          <p class="footer__copyright">
+            Copyright © <span class="blue">Jareer Ghany</span>
+          </p>
+        </div>
+        <ul class="footer__social--links">
+          <li class="footer__link"><i class="fa-brands fa-instagram"></i></li>
+          <li class="footer__link"><i class="fa-brands fa-facebook"></i></li>
+          <li class="footer__link"><i class="fa-solid fa-envelope"></i></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
